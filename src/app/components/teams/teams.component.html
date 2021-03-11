@@ -1,0 +1,44 @@
+<section class="search">
+      <input #searchTerm type="text" class="form-control" 
+       name="teamName" [(ngModel)]="teamName" 
+       (ngModelChange) = "Search()" 
+       placeholder="Search for your favorite team"
+       />
+
+  </section>
+<section class="cards">
+    <div *ngFor="let team of teams" class='card'>
+        <div class="card-inner">
+          <div class="card-front">
+              <img src={{team.strTeamBadge}} >
+          </div>
+          <div class= "card-back">
+              <h1> {{team.strTeam}}</h1>
+              <ul>
+                  <li>
+                      <strong>Year Established: </strong>
+                  {{team.intFormedYear}}
+                  </li>
+                  <li>
+                    <strong>Stadium Name: </strong>
+                {{team.strStadium}}
+                </li>
+                <li>
+                    <strong>Stadium Capacity: </strong>
+                {{team.intStadiumCapacity}}
+                </li>
+              </ul>
+              <br><br><br>
+              <a href="http://{{team.strTwitter}}" target="_blank">
+              <fa-icon [icon]="faTwitter" size="lg"></fa-icon>
+            </a>
+            <a href="http://{{team.strFacebook}}" target="_blank">
+              <fa-icon [icon]="faFacebook" size="lg"></fa-icon> 
+              </a>
+              <a href="http://{{team.strInstagram}}" target="_blank">
+              <fa-icon [icon]="faInstagram" size="lg"></fa-icon> 
+              </a>
+          </div>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,11 @@
 # NbaTeams
 
+Angular application which uses HttpClient Module to fetch NBA team data from sportsDB api.
+
+Api data is displayed to users as cards with flip animation.
+
+Users can filter which cards are displayed using the search box.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
 ## Development server
